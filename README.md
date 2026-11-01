@@ -2,6 +2,8 @@
 
 基于平面图的交互式水电点位清单，使用 React、TypeScript 和 Ant Design。当前维护版本为 2D 页面，支持强电、弱电、控制、水路筛选，区域聚焦、点位详情、附件对照及 CSV 导出。
 
+在线分享：https://kimi-air.github.io/customization/
+
 点位详情包括设计原因、数量、安装位置、参考高度和待核定条件。图上坐标用于方案讨论；安装尺寸与设备接口需结合施工现场、柜体和最终机型复核。
 
 ## 运行
@@ -36,6 +38,12 @@ python3 deliver.py
 ```
 
 `review_points.py` 读取初始数据及各修订模块生成 `src/data.json`；不要直接修改生成文件。新增、删除和移动点位时，应同步维护 `point_specs.py` 中的数量、高度及核量口径，并遵守该目录的 `AGENTS.md`。
+
+## GitHub Pages 发布
+
+发布源为 `main` 分支的 `/docs`。`npm run build` 会同步当前 2D 静态资源到该目录。修改方案后运行上面的完整构建流程，将源码、构建产物及 `docs/` 一并提交并推送到 `main`，GitHub Pages 即会发布更新。分享地址保持不变。
+
+发布内容仅为 2D 页面及其平面图、附件对照资源，不依赖本地服务器或登录。
 
 ## 目录
 

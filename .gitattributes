@@ -1,2 +1,4 @@
 *.csv text eol=crlf whitespace=cr-at-eol
 **/dist/app.js -whitespace linguist-generated=true
+docs/app.js -whitespace linguist-generated=true
+docs/app.css linguist-generated=true
