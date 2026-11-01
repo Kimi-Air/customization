@@ -1,7 +1,7 @@
 import {build} from 'esbuild';
 import {cp, mkdir, writeFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
-await build({entryPoints:['src/App.tsx'],bundle:true,minify:true,outfile:'dist/app.js',define:{'process.env.NODE_ENV':'"production"'}});
+await build({entryPoints:{app:'src/App.tsx',model:'src/ModelApp.tsx'},bundle:true,minify:true,outdir:'dist',define:{'process.env.NODE_ENV':'"production"'}});
 // GitHub Pages publishes main:/docs. Keep it synchronized on every build.
 const pages = fileURLToPath(new URL('../../docs/', import.meta.url));
 await mkdir(pages, {recursive: true});

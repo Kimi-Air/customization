@@ -8,7 +8,12 @@ for f in (root/'dist/assets').glob('*.png'):
  js=js.replace('assets/'+f.name,'data:image/png;base64,'+base64.b64encode(f.read_bytes()).decode())
 css=(root/'dist/app.css').read_text()
 html=(root/'dist/index.html').read_text().replace('<link rel="stylesheet" href="app.css">','<style>'+css+'</style>').replace('<script src="app.js"></script>','<script>'+js.replace('</script','<\\/script')+'</script>')
+html=html.replace('href:"model.html"','href:"碧瑶花园-三维空间与电位.html"').replace('href="model.html"','href="碧瑶花园-三维空间与电位.html"')
 (out/'碧瑶花园-水电点位图-2D.html').write_text(html)
+model=(root/'dist/model.html').read_text().replace('<link rel=\"stylesheet\" href=\"model.css\">','<style>'+(root/'dist/model.css').read_text()+'</style>')
+modeljs=(root/'dist/model.js').read_text().replace('href:\"./\"','href:\"碧瑶花园-水电点位图-2D.html\"')
+model=model.replace('<script src=\"model.js\"></script>','<script>'+modeljs.replace('</script','<\\/script')+'</script>')
+(out/'碧瑶花园-三维空间与电位.html').write_text(model)
 d=json.loads((root/'src/data.json').read_text())
 validate(d)
 with (out/'碧瑶花园-水电点位图-点位清单.csv').open('w',encoding='utf-8-sig',newline='') as f:

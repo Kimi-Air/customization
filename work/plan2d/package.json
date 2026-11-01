@@ -18,6 +18,10 @@
     "esbuild": "^0.28.2",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
+    "three": "^0.186.1",
     "typescript": "^7.0.2"
+  },
+  "devDependencies": {
+    "@types/three": "^0.187.0"
   }
 }

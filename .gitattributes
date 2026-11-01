@@ -2,3 +2,6 @@
 **/dist/app.js -whitespace linguist-generated=true
 docs/app.js -whitespace linguist-generated=true
 docs/app.css linguist-generated=true
+**/dist/model.js -whitespace linguist-generated=true
+docs/model.js -whitespace linguist-generated=true
+outputs/*.html -whitespace linguist-generated=true

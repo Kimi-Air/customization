@@ -11,3 +11,5 @@
 - 同步更新气泡、完整清单、浏览器CSV、`deliver.py`导出的CSV和离线HTML。保留原附件原文作为对照。
 - GitHub Pages 发布源为仓库 `main:/docs`；`npm run build` 会同步该目录。提交发布更新时一并包含 `docs/`，保持分享页面与当前方案一致。
 - 运行 `python3 review_points.py`、`npm run check`、`npm run build`、`python3 deliver.py`；检查参数完整性、数量与多标签对应关系，并在浏览器验证。修改Ant Design组件时按ant-design技能先查询API、再执行lint。
+- 3D使用`src/modelData.ts`从同一份2D数据生成标记；保留原编号。厨房柜体使用V9，柜内适配参考M1；K01按用户要求保留冰箱背后。三维示意标高不能回写成已确认施工参数。
+- 更新3D后验证立体、俯视、四面正视和剖切遮挡；正视仅标记对应面的接口。构建与导出同时覆盖`model.html`和离线三维HTML。
