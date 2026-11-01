@@ -1,0 +1,23 @@
+{
+  "name": "plan2d",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "python3 point_specs.py && node build.mjs",
+    "check": "python3 point_specs.py && tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ant-design/icons": "^6.3.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "antd": "^6.6.8",
+    "esbuild": "^0.28.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "typescript": "^7.0.2"
+  }
+}

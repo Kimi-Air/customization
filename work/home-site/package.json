@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@phosphor-icons/web": "^2.1.2",
+    "esbuild": "^0.28.2",
+    "three": "^0.186.1"
+  },
+  "scripts": {
+    "build": "esbuild app-src.js --bundle --minify --outfile=dist/app.js",
+    "dev": "python3 -m http.server 8765 --directory dist",
+    "deliver": "python3 make_deliverables.py"
+  }
+}
